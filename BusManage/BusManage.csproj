@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59AB9BF1-F6BB-448A-9357-B6E0E1D7C0B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusManage</RootNamespace>
+    <AssemblyName>BusManage</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bus.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="log4net">
+      <HintPath>..\..\zngj\BusChartSys\BusChartSys\bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmBusDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusDrivers.Designer.cs">
+      <DependentUpon>frmBusDrivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusChange.Designer.cs">
+      <DependentUpon>frmBusChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchedule.Designer.cs">
+      <DependentUpon>frmSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRunningLog_Nr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRunningLog_Nr.Designer.cs">
+      <DependentUpon>frmRunningLog_Nr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRunningLog_Fk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRunningLog_Fk.Designer.cs">
+      <DependentUpon>frmRunningLog_Fk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRunningLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRunningLog.Designer.cs">
+      <DependentUpon>frmRunningLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepairLogInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepairLogInput.Designer.cs">
+      <DependentUpon>frmRepairLogInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepairLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepairLog.Designer.cs">
+      <DependentUpon>frmRepairLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNonRunRecordInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNonRunRecordInput.Designer.cs">
+      <DependentUpon>frmNonRunRecordInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNonRunRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNonRunRecord.Designer.cs">
+      <DependentUpon>frmNonRunRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDrvingRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDrvingRecord.Designer.cs">
+      <DependentUpon>frmDrvingRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDrvingRecordInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDrvingRecordInput.Designer.cs">
+      <DependentUpon>frmDrvingRecordInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDrvSel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDrvSel.Designer.cs">
+      <DependentUpon>frmDrvSel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchEdit.Designer.cs">
+      <DependentUpon>frmSchEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTmrChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTmrChange.Designer.cs">
+      <DependentUpon>frmTmrChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZipHelper.cs" />
+    <Compile Include="BusInfo.cs" />
+    <Compile Include="CaseInfo.cs" />
+    <Compile Include="DrvInfo.cs" />
+    <Compile Include="FtpHelper.cs" />
+    <Compile Include="LineInfo.cs" />
+    <Compile Include="QueueInfo.cs" />
+    <Compile Include="Reverser.cs" />
+    <Compile Include="SchInfo.cs" />
+    <Compile Include="SocketClientManager.cs" />
+    <Compile Include="CFunc.cs" />
+    <Compile Include="CSocket.cs" />
+    <Compile Include="CDatabase.cs" />
+    <Compile Include="frmLines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLines.Designer.cs">
+      <DependentUpon>frmLines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CReg.cs" />
+    <Compile Include="CSubClass.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CVar.cs" />
+    <EmbeddedResource Include="frmBusDrivers.resx">
+      <DependentUpon>frmBusDrivers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusChange.resx">
+      <DependentUpon>frmBusChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchedule.resx">
+      <DependentUpon>frmSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRunningLog_Nr.resx">
+      <DependentUpon>frmRunningLog_Nr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRunningLog_Fk.resx">
+      <DependentUpon>frmRunningLog_Fk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRunningLog.resx">
+      <DependentUpon>frmRunningLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepairLogInput.resx">
+      <DependentUpon>frmRepairLogInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepairLog.resx">
+      <DependentUpon>frmRepairLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNonRunRecordInput.resx">
+      <DependentUpon>frmNonRunRecordInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNonRunRecord.resx">
+      <DependentUpon>frmNonRunRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDrvingRecord.resx">
+      <DependentUpon>frmDrvingRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDrvingRecordInput.resx">
+      <DependentUpon>frmDrvingRecordInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDrvSel.resx">
+      <DependentUpon>frmDrvSel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLines.resx">
+      <DependentUpon>frmLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchEdit.resx">
+      <DependentUpon>frmSchEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTmrChange.resx">
+      <DependentUpon>frmTmrChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSDATASRC">
+      <Guid>{7C0FFAB0-CD84-11D0-949A-00A0C91110ED}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mypages_16px_1097451_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_profile_16px_1097437_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\未标题-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Link - 02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Link - 05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_can_16px_557888_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_deny_16px_533412_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bus.ico" />
+    <Content Include="DING_64px_1186657_easyicon.net.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
